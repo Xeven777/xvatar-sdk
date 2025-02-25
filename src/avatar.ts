@@ -13,21 +13,13 @@ export function generateAvatarURL(
   options: AvatarOptions = { username: "" }
 ): string {
   const mergedOptions = { ...DEFAULT_OPTIONS, ...options };
-
-  const { rounded, size, text, isSvg } = mergedOptions;
-
+  const { rounded, size, text, isSvg, domain } = mergedOptions;
   const fileExtension = isSvg ? ".svg" : "";
-  const baseURL = `${mergedOptions.domain}/api/avatar/${username}${fileExtension}`;
-  const queryParams = new URLSearchParams();
-
-  queryParams.append("rounded", String(rounded));
-  queryParams.append("size", String(size));
+  let baseURL = `${domain}/api/avatar/${username}${fileExtension}?rounded=${rounded}&size=${size}`;
 
   if (text && isSvg) {
-    queryParams.append("text", text);
+    baseURL += `&text=${text}`;
   }
 
-  const queryString = queryParams.toString();
-
-  return queryString ? `${baseURL}?${queryString}` : baseURL;
+  return baseURL;
 }
