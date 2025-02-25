@@ -1,0 +1,26 @@
+{
+  "name": "xvatar-sdk",
+  "version": "1.0.0",
+  "description": "A simple SDK for generating beatiful gradient avatars using xvatar.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "avatar",
+    "sdk",
+    "xvatar",
+    "gradient",
+    "typescript"
+  ],
+  "author": "Xeven777",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
