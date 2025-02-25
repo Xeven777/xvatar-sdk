@@ -1,6 +1,8 @@
-# Xvatar SDK 🎨
+# Xvatar SDK 🎨 ![](https://xvatar.vercel.app/api/avatar/anish?size=20) ![](https://xvatar.vercel.app/api/avatar/sdk?size=20) ![](https://xvatar.vercel.app/api/avatar/xvatarsdk?size=20) ![](https://xvatar.vercel.app/api/avatar/xvatar?size=20)
 
 Generate beautiful, unique gradient avatars for your users with Xvatar SDK - a powerful TypeScript library that creates consistent, personalized avatars from usernames. ✨
+
+### Website : [Xvatar](https://xvatar.vercel.app)
 
 ## 🚀 Installation
 
