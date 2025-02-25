@@ -10,7 +10,7 @@ const DEFAULT_OPTIONS = {
 
 export function generateAvatarURL(
   username: string,
-  options: AvatarOptions = { username: "" }
+  options: AvatarOptions
 ): string {
   const mergedOptions = { ...DEFAULT_OPTIONS, ...options };
   const { rounded, size, text, isSvg, domain } = mergedOptions;

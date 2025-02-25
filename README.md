@@ -1,56 +1,91 @@
-# xvatar-sdk/xvatar-sdk/README.md
+# Xvatar SDK 🎨
 
-# Xvatar SDK
+Generate beautiful, unique gradient avatars for your users with Xvatar SDK - a powerful TypeScript library that creates consistent, personalized avatars from usernames. ✨
 
-Xvatar SDK is a TypeScript library for generating avatars based on usernames. It provides a simple interface to create and customize avatars in various formats.
+## 🚀 Installation
 
-## Installation
-
-To install the Xvatar SDK, use npm:
-
-```
+```bash
 npm install xvatar-sdk
+# or
+yarn add xvatar-sdk
+# or
+pnpm add xvatar-sdk
+# or
+bun add xvatar-sdk
 ```
 
-## Usage
-
-To use the Xvatar SDK, import the necessary functions from the package:
+## 💡 Quick Start
 
 ```typescript
-import { generateAvatar } from 'xvatar-sdk';
-```
+import { generateAvatar } from "xvatar-sdk";
 
-### Generating an Avatar
+// Generate a simple avatar
+const avatarUrl = generateAvatar({ username: "johndoe" });
 
-You can generate an avatar by calling the `generateAvatar` function with the required parameters:
-
-```typescript
-const avatarUrl = generateAvatar({
-  username: 'exampleUser',
-  size: 240,
-  format: 'png',
+// Customize your avatar
+const customAvatar = generateAvatar({
+  username: "johndoe",
+  size: 400,
+  format: "svg",
+  rounded: 50,
 });
 ```
 
-### Avatar Options
+## 🛠️ Features
 
-The `generateAvatar` function accepts an options object with the following properties:
+- 🎯 Consistent avatars for the same username
+- 🖼️ Support for PNG and SVG formats
+- 📐 Customizable size and roundness
+- ⚡ Lightweight and fast
+- 🌈 Beautiful color combinations
 
-- `username`: The username or seed for generating the avatar (string, required).
-- `size`: The size of the avatar in pixels (number, optional, default: 240).
-- `format`: The format of the avatar, either 'png' or 'svg' (string, optional, default: 'png').
-- `rounded`: The roundness of the avatar corners (number, optional, default: 120).
+## 🔧 API Reference
 
-## API Reference
+### generateAvatar(options)
 
-### `generateAvatar(options: AvatarOptions): string`
+Creates a unique avatar based on the provided options.
 
-Generates an avatar URL based on the provided options.
+```typescript
+// Basic usage
+const basic = generateAvatar({
+  username: "alice",
+});
 
-#### Parameters
+// All options
+const advanced = generateAvatar({
+  username: "bob", // Required: Seed for the avatar
+  size: 300, // Optional: Size in pixels (default: 240)
+  format: "svg", // Optional: 'png' or 'svg' (default: 'png')
+  rounded: 80, // Optional: Corner roundness (default: 120)
+});
+```
 
-- `options`: An object containing the avatar options.
+## 🎨 Examples
 
-#### Returns
+Here are some example avatars generated with different options:
 
-- A string representing the URL of the generated avatar.
+```typescript
+// Professional avatar
+const professional = generateAvatar({
+  username: "ceo@company.com",
+  size: 500,
+  rounded: 100,
+});
+
+// Social media profile
+const social = generateAvatar({
+  username: "cool_user_123",
+  size: 200,
+  format: "svg",
+});
+
+// Minimal square avatar
+const minimal = generateAvatar({
+  username: "minimalist",
+  rounded: 0,
+});
+```
+
+---
+
+Made with ❤️ by the [Anish Biswas](https://anish7.me) aka [Xeven777](https://github.com/Xeven777)

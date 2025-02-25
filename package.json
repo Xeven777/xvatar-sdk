@@ -1,10 +1,24 @@
 {
   "name": "xvatar-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple SDK for generating beatiful gradient avatars using xvatar.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "author": {
+    "name": "Anish Biswas",
+    "email": "xevenbiswas@gmail.com",
+    "url": "https://github.com/xeven777"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeven777/xvatar-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xeven777/xvatar-sdk/issues"
+  },
+  "homepage": "https://github.com/xeven777/xvatar-sdk#readme",
   "files": [
     "dist"
   ],
@@ -17,9 +31,9 @@
     "sdk",
     "xvatar",
     "gradient",
-    "typescript"
+    "typescript",
+    "gradient-avatar"
   ],
-  "author": "Xeven777",
   "devDependencies": {
     "typescript": "^5.7.3"
   }
