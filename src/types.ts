@@ -35,4 +35,10 @@ export interface AvatarOptions {
    * @default undefined
    */
   text?: string;
+
+  /**
+   * Add user silhouette icon to the avatar
+   * @default false
+   */
+  userLogo?: boolean;
 }

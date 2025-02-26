@@ -1,4 +1,4 @@
-# Xvatar SDK 🎨 ![](https://xvatar.vercel.app/api/avatar/anish?size=20) ![](https://xvatar.vercel.app/api/avatar/sdk?size=20) ![](https://xvatar.vercel.app/api/avatar/xvatarsdk?size=20) ![](https://xvatar.vercel.app/api/avatar/xvatar?size=20)
+# Xvatar SDK 🎨 ![](https://xvatar.vercel.app/api/avatar/anish?size=20) ![](https://xvatar.vercel.app/api/avatar/sdk.svg?userLogo=true&size=20) ![](https://xvatar.vercel.app/api/avatar/xvatarsdk?size=20) ![](https://xvatar.vercel.app/api/avatar/xvatar?size=20)
 
 Generate beautiful, unique gradient avatars for your users with Xvatar SDK - a powerful TypeScript library that creates consistent, personalized avatars from usernames. ✨
 
@@ -54,6 +54,7 @@ interface AvatarOptions {
   format?: "png" | "svg"; // Optional: Output format (default: 'png')
   rounded?: number; // Optional: Corner roundness (default: 70)
   text?: string; // Optional: Custom text (SVG only)
+  userLogo?: boolean; // Optional: Use user logo (default: false)
 }
 
 // Basic usage
@@ -67,7 +68,7 @@ const advanced = generateAvatar({
   size: 200,
   format: "svg",
   rounded: 50,
-  text: "BB",
+  userLogo: true,
 });
 ```
 
@@ -94,7 +95,42 @@ const squareAvatar = generateAvatar({
   username: "minimalist",
   rounded: 0,
 });
+
+// Cute user avatar
+const squareAvatar = generateAvatar({
+  username: "minimalist",
+  rounded: 30,
+  userLogo: true,
+});
 ```
+
+## 🖼️ Gallery
+
+Here are some example avatars generated using Xvatar SDK:
+
+### Default Avatars
+
+![Default](https://xvatar.vercel.app/api/avatar/john?size=100)
+![Default](https://xvatar.vercel.app/api/avatar/jane?size=100)
+![Default](https://xvatar.vercel.app/api/avatar/alex?size=100)
+
+### SVG with User Logo
+
+![User Logo](https://xvatar.vercel.app/api/avatar/dev.svg?userLogo=true&size=100)
+![User Logo](https://xvatar.vercel.app/api/avatar/cool.svg?userLogo=true&size=100)
+![User Logo](https://xvatar.vercel.app/api/avatar/pro.svg?userLogo=true&size=100)
+
+### Different Shapes
+
+![Square](https://xvatar.vercel.app/api/avatar/square?rounded=0&size=100)
+![Rounded](https://xvatar.vercel.app/api/avatar/rounded?rounded=30&size=100)
+![Circle](https://xvatar.vercel.app/api/avatar/circle?rounded=100&size=100)
+
+### SVG with Text
+
+![Text](https://xvatar.vercel.app/api/avatar/text1.svg?text=AB&size=100)
+![Text](https://xvatar.vercel.app/api/avatar/text2.svg?text=CD&size=100)
+![Text](https://xvatar.vercel.app/api/avatar/text3.svg?text=XY&size=100)
 
 ---
 
