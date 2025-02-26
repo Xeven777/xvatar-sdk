@@ -27,7 +27,7 @@ const avatarUrl = generateAvatar({ username: "johndoe" });
 // Customize your avatar
 const customAvatar = generateAvatar({
   username: "johndoe",
-  size: 400,
+  size: 200,
   format: "svg",
   rounded: 50,
 });
@@ -48,6 +48,14 @@ const customAvatar = generateAvatar({
 Creates a unique avatar based on the provided options.
 
 ```typescript
+interface AvatarOptions {
+  username: string; // Required: Seed for the avatar
+  size?: number; // Optional: Size in pixels (default: 140)
+  format?: "png" | "svg"; // Optional: Output format (default: 'png')
+  rounded?: number; // Optional: Corner roundness (default: 70)
+  text?: string; // Optional: Custom text (SVG only)
+}
+
 // Basic usage
 const basic = generateAvatar({
   username: "alice",
@@ -55,10 +63,11 @@ const basic = generateAvatar({
 
 // All options
 const advanced = generateAvatar({
-  username: "bob", // Required: Seed for the avatar
-  size: 300, // Optional: Size in pixels (default: 240)
-  format: "svg", // Optional: 'png' or 'svg' (default: 'png')
-  rounded: 80, // Optional: Corner roundness (default: 120)
+  username: "bob",
+  size: 200,
+  format: "svg",
+  rounded: 50,
+  text: "BB",
 });
 ```
 
@@ -67,22 +76,21 @@ const advanced = generateAvatar({
 Here are some example avatars generated with different options:
 
 ```typescript
-// Professional avatar
-const professional = generateAvatar({
+// SVG with custom text
+const svgAvatar = generateAvatar({
   username: "ceo@company.com",
-  size: 500,
-  rounded: 100,
-});
-
-// Social media profile
-const social = generateAvatar({
-  username: "cool_user_123",
-  size: 200,
   format: "svg",
+  text: "CEO",
 });
 
-// Minimal square avatar
-const minimal = generateAvatar({
+// Large PNG avatar
+const largeAvatar = generateAvatar({
+  username: "cool_user_123",
+  size: 400,
+});
+
+// Square avatar
+const squareAvatar = generateAvatar({
   username: "minimalist",
   rounded: 0,
 });
