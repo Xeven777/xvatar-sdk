@@ -1,6 +1,6 @@
 {
   "name": "xvatar-sdk",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A simple SDK for generating beatiful gradient avatars using xvatar.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
